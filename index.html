@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Adding content with document.createElement</title>
+    <style>
+        .bar {
+            background: gray;
+            height: 20px;
+            margin: 10px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Adding content with document.createElement</h1>
+    <div id="d1"></div>
+
+    <script>
+        const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940,
+            472
+        ];
+
+        for (let i = 1; i < 21; i++) {
+            let newP = document.createElement("p");
+            let newContent = document.createTextNode("Katas #1: " + i);
+            newP.appendChild(newContent);
+            document.body.appendChild(newP);
+        }
+
+        for (let i = 2; i <= 20; i = i + 2) {
+            let newP = document.createElement("p");
+            let newContent = document.createTextNode("Katas #2: " + i);
+            newP.appendChild(newContent);
+            document.body.appendChild(newP);
+        }
+
+        for (let i = 1; i < 20; i = i + 2) {
+            let newP = document.createElement("p");
+            let newContent = document.createTextNode("Katas #3: " + i);
+            newP.appendChild(newContent);
+            document.body.appendChild(newP);
+        }
+
+        for (let i = 5; i <= 100; i = i + 5) {
+            let newP = document.createElement("p");
+            let newContent = document.createTextNode("Katas #4: " + i);
+            newP.appendChild(newContent);
+            document.body.appendChild(newP);
+        }
+
+        for (let i = 1; i <= 10; i++) {
+            let newP = document.createElement("p");
+            let newContent = document.createTextNode("Katas #5: " + i * i);
+            newP.appendChild(newContent);
+            document.body.appendChild(newP);
+        }
+
+        for (let i = 20; i > 0; i--) {
+            let newP = document.createElement("p");
+            let newContent = document.createTextNode("Katas #6: " + i);
+            newP.appendChild(newContent);
+            document.body.appendChild(newP);
+        }
+
+        for (let i = 20; i > 0; i = i - 2) {
+            let newP = document.createElement("p");
+            let newContent = document.createTextNode("Katas #7: " + i);
+            newP.appendChild(newContent);
+            document.body.appendChild(newP);
+        }
+
+        for (let i = 19; i > 0; i = i - 2) {
+            let newP = document.createElement("p");
+            let newContent = document.createTextNode("Katas #8: " + i);
+            newP.appendChild(newContent);
+            document.body.appendChild(newP);
+        }
+
+        for (let i = 100; i > 0; i = i - 5) {
+            let newP = document.createElement("p");
+            let newContent = document.createTextNode("Katas #9: " + i);
+            newP.appendChild(newContent);
+            document.body.appendChild(newP);
+        }
+
+        for (let i = 10; i > 0; i--) {
+            let newP = document.createElement("p");
+            let newContent = document.createTextNode("Katas #10: " + i * i);
+            newP.appendChild(newContent);
+            document.body.appendChild(newP);
+        }
+
+
+        let newP = document.createElement("p");
+        let newContent = document.createTextNode("Katas #11: " + sampleArray);
+        newP.appendChild(newContent);
+        document.body.appendChild(newP);
+
+
+        for (let i = 0; i < sampleArray.length; i++) {
+            if (sampleArray[i] % 2 == 0) {
+                let newP = document.createElement("p");
+                let newContent = document.createTextNode("Katas #12: " + sampleArray[i]);
+                newP.appendChild(newContent);
+                document.body.appendChild(newP);
+            }
+        }
+
+        for (let i = 0; i < sampleArray.length; i++) {
+            if (sampleArray[i] % 2 != 0) {
+                let newP = document.createElement("p");
+                let newContent = document.createTextNode("Katas #13: " + sampleArray[i]);
+                newP.appendChild(newContent);
+                document.body.appendChild(newP);
+            }
+        }
+
+        for (let i = 0; i < sampleArray.length; i++) {
+
+            let newP = document.createElement("p");
+            let newContent = document.createTextNode("Katas #14: " + sampleArray[i] * sampleArray[i]);
+            newP.appendChild(newContent);
+            document.body.appendChild(newP);
+        }
+
+
+        let sum15 = 0
+        for (let i = 1; i < 20; i++) {
+            sum15 = sum15 + i;
+        }
+        let newP15 = document.createElement("p");
+        let newContent15 = document.createTextNode("Katas #15: " + sum15);
+        newP15.appendChild(newContent15);
+        document.body.appendChild(newP15);
+
+
+
+        let sum16 = 0
+        for (let i = 0; i < sampleArray.length; i++) {
+            sum16 = sum16 + sampleArray[i];
+        }
+        let newP16 = document.createElement("p");
+        let newContent16 = document.createTextNode("Katas #16: " + sum16);
+        newP16.appendChild(newContent16);
+        document.body.appendChild(newP16);
+
+
+        let newP17 = document.createElement("p");
+        let newContent17 = document.createTextNode("Katas #17: " + Math.min(...sampleArray));
+        newP17.appendChild(newContent17);
+        document.body.appendChild(newP17);
+
+
+        let newP18 = document.createElement("p");
+        let newContent18 = document.createTextNode("Katas #18: " + Math.max(...sampleArray));
+        newP18.appendChild(newContent18);
+        document.body.appendChild(newP18);
+
+
+
+
+        for (i = 1; i <= 20; i++) {
+            let newElement19 = document.createElement("div");
+            newElement19.className = "bar";
+            newElement19.style.width = "100px";
+            let newText19 = document.createTextNode("Kata19 #" + i);
+            newElement19.appendChild(newText19);
+            document.body.appendChild(newElement19);
+        }
+
+        for (i = 1; i <= 20; i++) {
+            let newElement19 = document.createElement("div");
+            newElement19.className = "bar";
+            newElement19.style.width = 100 + i * 5 + "px";
+            let newText19 = document.createTextNode("Kata20 #" + i);
+            newElement19.appendChild(newText19);
+            document.body.appendChild(newElement19);
+        }
+
+        for (i = 1; i <= 20; i++) {
+            let newElement19 = document.createElement("div");
+            newElement19.className = "bar";
+            newElement19.style.width = sampleArray[i] + "px";
+            let newText19 = document.createTextNode("Kata21 #" + i);
+            newElement19.appendChild(newText19);
+            document.body.appendChild(newElement19);
+        }
+
+        for (i = 1; i <= 20; i++) {
+            if (i % 2 == 0) {
+
+                let newElement19 = document.createElement("div");
+                newElement19.className = "bar";
+                newElement19.style.width = sampleArray[i] + "px";
+                let newText19 = document.createTextNode("Kata22 #" + i);
+                newElement19.appendChild(newText19);
+                document.body.appendChild(newElement19);
+            } else {
+                let newElement19 = document.createElement("div");
+                newElement19.className = "bar";
+                newElement19.style.background = "red";
+                newElement19.style.width = sampleArray[i] + "px";
+                let newText19 = document.createTextNode("Kata22 #" + i);
+                newElement19.appendChild(newText19);
+                document.body.appendChild(newElement19);
+            }
+        }
+
+
+
+ for (i = 0; i < sampleArray.length; i++) {
+            if (sampleArray[i] % 2 == 0) {
+
+                let newElement19 = document.createElement("div");
+                newElement19.className = "bar";
+                newElement19.style.background = "red";
+                newElement19.style.width = sampleArray[i] + "px";
+                let newText19 = document.createTextNode("Kata23 #" + i);
+                newElement19.appendChild(newText19);
+                document.body.appendChild(newElement19);
+            } else {
+                let newElement19 = document.createElement("div");
+                newElement19.className = "bar";
+                newElement19.style.width = sampleArray[i] + "px";
+                let newText19 = document.createTextNode("Kata23 #" + i);
+                newElement19.appendChild(newText19);
+                document.body.appendChild(newElement19);
+            }
+        }
+
+
+
+    </script>
+
+
+
+
+    <!--
+    <script>
+      for(i=1; i<=3; i++) {
+        // Create a div, with class "bar", and set the width to 100px.
+        var newElement = document.createElement("div");
+        newElement.className = "bar";
+        newElement.style.width = i*100 + "px";
+
+        // Place a text label inside the new div.
+        var newText = document.createTextNode("Bar #" + i);
+        newElement.appendChild(newText);
+
+        // Put the new div on the page inside the existing element "d1".
+        var destination = document.getElementById("d1");
+        destination.appendChild(newElement);
+      }
+
+
+19  Display 20 solid gray rectangles, each 20px high and 100px wide.
+20  Display 20 solid gray rectangles, each 20px high, with widths ranging evenly from 105px to 200px (remember #4, above).
+21  Display 20 solid gray rectangles, each 20px high, with widths in pixels given by the 20 elements of sampleArray.
+22  As in #21, but alternate colors so that every other rectangle is red.
+23  As in #21, but color the rectangles with even widths red. 
+
+
+    </script>
+
+-->
+</body>
+
+</html>
